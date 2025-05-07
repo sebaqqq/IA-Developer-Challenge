@@ -28,10 +28,10 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
           }`}
         ></div>
       )}
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-3">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-950 mb-3">
         {title}
       </h2>
-      {subtitle && <p className="text-lg text-gray-400">{subtitle}</p>}
+      {subtitle && <p className="text-lg text-gray-500">{subtitle}</p>}
     </div>
   );
 };
