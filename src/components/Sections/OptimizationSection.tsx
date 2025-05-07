@@ -1,35 +1,35 @@
-import React from 'react';
-import SectionTitle from '../UI/SectionTitle';
-import Development from './Development';
-import Testing from './Testing';
-import Deployment from './Deployment';
-import ClientInteraction from './ClientInteraction';
-import { Code, CheckCircle, UploadCloud, MessageSquare } from 'lucide-react';
+import React from "react";
+import SectionTitle from "../UI/SectionTitle";
+import Development from "./Development";
+import Testing from "./Testing";
+import Deployment from "./Deployment";
+import ClientInteraction from "./ClientInteraction";
+import { Code, CheckCircle, UploadCloud, MessageSquare } from "lucide-react";
 
 const OptimizationSection = () => {
   return (
     <section id="optimization" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="Process Optimization Through AI"
-          subtitle="Transforming each phase of the software development lifecycle"
+          title="Optimización de Procesos a través de la IA"
+          subtitle="Transformando cada fase del ciclo de vida del desarrollo de software"
           alignment="center"
         />
-        
+
         <div className="max-w-5xl mx-auto">
           <div className="mb-12">
             <ProcessTabs />
           </div>
-          
+
           <div className="space-y-16">
             <div id="development">
               <div className="flex items-center mb-6">
                 <Code className="h-6 w-6 text-blue-600 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">Development</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Desarrollo</h3>
               </div>
               <Development />
             </div>
-            
+
             <div id="testing">
               <div className="flex items-center mb-6">
                 <CheckCircle className="h-6 w-6 text-purple-600 mr-3" />
@@ -37,19 +37,21 @@ const OptimizationSection = () => {
               </div>
               <Testing />
             </div>
-            
+
             <div id="deployment">
               <div className="flex items-center mb-6">
                 <UploadCloud className="h-6 w-6 text-teal-600 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">Deployment</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Despliegue</h3>
               </div>
               <Deployment />
             </div>
-            
+
             <div id="client-interaction">
               <div className="flex items-center mb-6">
                 <MessageSquare className="h-6 w-6 text-amber-600 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">Client Interaction</h3>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Interacción con Clientes
+                </h3>
               </div>
               <ClientInteraction />
             </div>
@@ -67,7 +69,7 @@ const ProcessTabs = () => {
         <ProcessTab
           href="#development"
           icon={<Code className="h-4 w-4" />}
-          label="Development"
+          label="Desarrollo"
         />
         <ProcessTab
           href="#testing"
@@ -77,12 +79,12 @@ const ProcessTabs = () => {
         <ProcessTab
           href="#deployment"
           icon={<UploadCloud className="h-4 w-4" />}
-          label="Deployment"
+          label="Despliegue"
         />
         <ProcessTab
           href="#client-interaction"
           icon={<MessageSquare className="h-4 w-4" />}
-          label="Client Interaction"
+          label="Interacción con Clientes"
         />
       </div>
     </div>

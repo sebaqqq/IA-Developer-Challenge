@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface CardProps {
   title: string;
@@ -7,14 +7,21 @@ interface CardProps {
   gradient?: boolean;
 }
 
-const Card: React.FC<CardProps> = ({ title, icon, children, gradient = false }) => {
+const Card: React.FC<CardProps> = ({
+  title,
+  icon,
+  children,
+  gradient = false,
+}) => {
   return (
-    <div className={`rounded-xl shadow-md overflow-hidden ${gradient ? 'bg-gradient-to-br from-blue-50 to-purple-50' : 'bg-white'}`}>
+    <div
+      className={`rounded-xl shadow-md overflow-hidden ${
+        gradient ? "bg-gradient-to-br from-blue-50 to-purple-50" : "bg-white"
+      }`}
+    >
       <div className="p-6">
         <div className="flex items-start mb-4">
-          <div className="flex-shrink-0 bg-blue-100 p-2 rounded-lg">
-            {icon}
-          </div>
+          <div className="flex-shrink-0 bg-blue-100 p-2 rounded-lg">{icon}</div>
           <h3 className="ml-4 text-xl font-semibold text-gray-900">{title}</h3>
         </div>
         <div className="text-gray-700">{children}</div>

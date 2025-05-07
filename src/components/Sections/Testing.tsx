@@ -1,20 +1,22 @@
-import React from 'react';
-import Card from '../UI/Card';
-import { CheckCircle, Shield, AlertTriangle, RefreshCw } from 'lucide-react';
+import React from "react";
+import Card from "../UI/Card";
+import { CheckCircle, Shield, AlertTriangle, RefreshCw } from "lucide-react";
 
 const Testing = () => {
   return (
     <div className="py-12">
       <div className="grid md:grid-cols-2 gap-8">
         <div className="space-y-6 order-2 md:order-1">
-          <Card 
-            title="Automated Test Generation" 
+          <Card
+            title="Generación Automatizada de Pruebas"
             icon={<CheckCircle className="h-5 w-5 text-green-600" />}
             gradient
           >
             <p className="mb-4">
-              AI can analyze code and automatically generate comprehensive test suites covering unit tests, 
-              integration tests, and end-to-end scenarios with intelligent edge case detection.
+              La IA puede analizar código y generar automáticamente conjuntos de
+              pruebas integrales que abarcan pruebas unitarias, pruebas de
+              integración y escenarios integrales con detección inteligente de
+              casos extremos.
             </p>
             <div className="p-4 bg-white/70 rounded-lg border border-gray-100">
               <pre className="text-xs text-gray-800 overflow-x-auto">
@@ -33,57 +35,66 @@ test('validateEmail function', () => {
               </pre>
             </div>
           </Card>
-          
-          <Card 
-            title="Security Vulnerability Detection" 
+
+          <Card
+            title="Detección de Vulnerabilidades de Seguridad"
             icon={<Shield className="h-5 w-5 text-blue-600" />}
           >
             <p>
-              AI-powered security analysis can continuously scan code for potential vulnerabilities,
-              identify security risks before deployment, and suggest secure alternatives to problematic code patterns.
+              El análisis de seguridad impulsado por IA puede escanear
+              continuamente el código en busca de posibles vulnerabilidades,
+              identificar riesgos de seguridad antes del despliegue y sugerir
+              alternativas seguras a patrones de código problemáticos.
             </p>
           </Card>
         </div>
-        
+
         <div className="order-1 md:order-2">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Testing & Quality Assurance</h3>
-          
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            Pruebas y Garantía de Calidad
+          </h3>
+
           <p className="text-gray-700 mb-4">
-            Quality assurance requires extensive testing across multiple scenarios and edge cases. 
-            AI can revolutionize this process by automating test creation, execution, and analysis.
+            El control de calidad requiere pruebas exhaustivas en múltiples
+            escenarios y casos extremos. La IA puede revolucionar este proceso
+            al automatizar la creación, ejecución y análisis de pruebas.
           </p>
-          
+
           <p className="text-gray-700 mb-6">
-            Beyond simple test generation, AI can predict potential failure points, identify security vulnerabilities, 
-            and ensure comprehensive test coverage without manual intervention.
+            Más allá de la simple generación de pruebas, la IA puede predecir
+            posibles puntos de fallo, identificar vulnerabilidades de seguridad
+            y garantizar una cobertura de pruebas completa sin intervención
+            manual.
           </p>
-          
+
           <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
-            <h4 className="text-lg font-semibold text-gray-900 mb-4">Benefits of AI-Powered Testing</h4>
-            
+            <h4 className="text-lg font-semibold text-gray-900 mb-4">
+              Beneficios de las Pruebas Impulsadas por IA
+            </h4>
+
             <div className="space-y-4">
-              <BenefitItem 
+              <BenefitItem
                 icon={<RefreshCw className="h-4 w-4 text-blue-600" />}
-                title="Continuous Testing"
-                description="Tests run automatically with each code change, providing immediate feedback"
+                title="Pruebas Continuas"
+                description="¡Las pruebas se ejecutan automáticamente con cada cambio de código! Esto significa que recibes retroalimentación al instante, lo que te ayuda a identificar problemas rápidamente y mantener la calidad del código."
               />
-              
-              <BenefitItem 
+
+              <BenefitItem
                 icon={<AlertTriangle className="h-4 w-4 text-amber-600" />}
-                title="Proactive Issue Detection"
-                description="AI identifies potential issues before they become problems in production"
+                title="Detección Proactiva de Problemas"
+                description="¡La IA puede identificar posibles problemas antes de que se conviertan en un dolor de cabeza en producción! Esto te permite solucionarlos de manera proactiva, evitando sorpresas a última hora."
               />
-              
-              <BenefitItem 
+
+              <BenefitItem
                 icon={<Shield className="h-4 w-4 text-green-600" />}
-                title="Security-First Testing"
-                description="Automated security analysis built into the testing process"
+                title="Pruebas con Enfoque en Seguridad"
+                description="¡Incorpora un análisis de seguridad automatizado en el proceso de pruebas! Esto te ayuda a detectar vulnerabilidades antes de que lleguen a producción, asegurando que tu aplicación sea segura desde el principio."
               />
-              
-              <BenefitItem 
+
+              <BenefitItem
                 icon={<CheckCircle className="h-4 w-4 text-purple-600" />}
-                title="Comprehensive Coverage"
-                description="AI ensures all code paths are tested, including edge cases often missed manually"
+                title="Cobertura Integral"
+                description="¡La IA asegura que todos los caminos del código sean probados, incluyendo esos casos límite que a menudo se pasan por alto manualmente! Esto garantiza una cobertura más completa y mejora la calidad de tus pruebas."
               />
             </div>
           </div>
@@ -99,10 +110,16 @@ interface BenefitItemProps {
   description: string;
 }
 
-const BenefitItem: React.FC<BenefitItemProps> = ({ icon, title, description }) => {
+const BenefitItem: React.FC<BenefitItemProps> = ({
+  icon,
+  title,
+  description,
+}) => {
   return (
     <div className="flex items-start">
-      <div className="flex-shrink-0 p-1 bg-white rounded-md shadow-sm">{icon}</div>
+      <div className="flex-shrink-0 p-1 bg-white rounded-md shadow-sm">
+        {icon}
+      </div>
       <div className="ml-3">
         <h5 className="font-medium text-gray-900">{title}</h5>
         <p className="text-sm text-gray-600">{description}</p>

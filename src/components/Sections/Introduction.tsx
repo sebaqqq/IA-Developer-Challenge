@@ -1,56 +1,66 @@
-import React from 'react';
-import SectionTitle from '../UI/SectionTitle';
-import { Bot, Code, Server } from 'lucide-react';
+import React from "react";
+import SectionTitle from "../UI/SectionTitle";
+import { Bot, Code, Server } from "lucide-react";
 
 const Introduction = () => {
   return (
     <section id="introduction" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title="The Developer Automation Challenge"
-          subtitle="Exploring how AI can transform and enhance the role of software developers"
+          title="El desafío de la automatización del desarrollador"
+          subtitle="Explorando cómo la IA puede transformar y mejorar el rol de los desarrolladores de software"
         />
-        
+
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <p className="text-lg text-gray-700 mb-6">
-              In today's rapidly evolving tech landscape, the role of a software developer faces 
-              unprecedented opportunities for transformation through artificial intelligence and automation.
+              En el panorama tecnológico de rápido cambio de hoy en día, mi rol
+              como desarrollador de software se ve enriquecido con oportunidades
+              sin precedentes para la transformación, gracias a la inteligencia
+              artificial y la automatización, herramientas que me permiten
+              optimizar procesos y ofrecer soluciones más eficientes y
+              innovadoras.
             </p>
-            
+
             <p className="text-lg text-gray-700 mb-6">
-              The challenge before us is to explore how AI-powered tools, especially large language models 
-              like GPT, can revolutionize our daily tasks—from code generation and testing to documentation 
-              and client interaction.
+              El desafío que tenemos por delante es explorar cómo las
+              herramientas impulsadas por IA, especialmente los modelos de
+              lenguaje grandes como GPT, pueden revolucionar nuestras tareas
+              diarias, desde la generación y prueba de código hasta la
+              documentación y la interacción con los clientes.
             </p>
-            
+
             <p className="text-lg text-gray-700">
-              This conceptual exploration examines a future where AI doesn't just assist developers, 
-              but fundamentally changes how we approach software creation, potentially enhancing 
-              efficiency, quality, and creativity across the entire development lifecycle.
+              Esta exploración conceptual analiza un futuro en el que la IA no
+              solo asiste a los desarrolladores, sino que cambia
+              fundamentalmente la forma en que abordamos la creación de
+              software, potenciando la eficiencia, calidad y creatividad a lo
+              largo de todo el ciclo de vida del desarrollo.
             </p>
           </div>
-          
+
           <div className="bg-gray-50 rounded-xl p-8 shadow-sm">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Areas of Transformation</h3>
-            
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              Áreas Clave de Transformación
+            </h3>
+
             <div className="space-y-4">
-              <TransformationArea 
+              <TransformationArea
                 icon={<Code className="h-5 w-5 text-blue-600" />}
-                title="Code Generation & Optimization"
-                description="AI automating routine coding tasks while optimizing performance"
+                title="Generación y Optimización de Código"
+                description="La IA automatiza tareas rutinarias de codificación mientras optimiza el rendimiento."
               />
-              
-              <TransformationArea 
+
+              <TransformationArea
                 icon={<Server className="h-5 w-5 text-purple-600" />}
-                title="Testing & Deployment"
-                description="Automated test creation and streamlined deployment processes"
+                title="Pruebas y Despliegue"
+                description="Creación automatizada de pruebas y procesos de despliegue simplificados."
               />
-              
-              <TransformationArea 
+
+              <TransformationArea
                 icon={<Bot className="h-5 w-5 text-teal-600" />}
-                title="Client Interaction & Documentation"
-                description="AI-powered analysis of requirements and automatic documentation"
+                title="Interacción con Clientes y Documentación"
+                description="Análisis de requisitos impulsado por IA y documentación automática."
               />
             </div>
           </div>
@@ -66,10 +76,16 @@ interface TransformationAreaProps {
   description: string;
 }
 
-const TransformationArea: React.FC<TransformationAreaProps> = ({ icon, title, description }) => {
+const TransformationArea: React.FC<TransformationAreaProps> = ({
+  icon,
+  title,
+  description,
+}) => {
   return (
     <div className="flex items-start">
-      <div className="flex-shrink-0 p-2 rounded-lg bg-white shadow-sm">{icon}</div>
+      <div className="flex-shrink-0 p-2 rounded-lg bg-white shadow-sm">
+        {icon}
+      </div>
       <div className="ml-4">
         <h4 className="font-medium text-gray-900">{title}</h4>
         <p className="text-gray-600 text-sm">{description}</p>
