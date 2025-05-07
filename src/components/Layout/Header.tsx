@@ -8,6 +8,10 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-gray-200">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -43,23 +47,36 @@ const Header = () => {
       <div
         className={`md:hidden ${
           isMenuOpen ? "block" : "hidden"
-        } absolute top-22 left-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 py-4`}
+        } absolute left-0 w-full bg-white backdrop-blur-md border-b border-indigo-600 py-2`}
       >
         <div className="container mx-auto px-4">
           <nav className="flex flex-col items-center space-y-4">
             <NavLink
               href="#introduction"
               icon={<Sparkles className="h-4 w-4" />}
+              onClick={closeMenu}
             >
               Challenge
             </NavLink>
-            <NavLink href="#optimization" icon={<Braces className="h-4 w-4" />}>
+            <NavLink
+              href="#optimization"
+              icon={<Braces className="h-4 w-4" />}
+              onClick={closeMenu}
+            >
               Mejoramiento
             </NavLink>
-            <NavLink href="#gpt-component" icon={<Bot className="h-4 w-4" />}>
+            <NavLink
+              href="#gpt-component"
+              icon={<Bot className="h-4 w-4" />}
+              onClick={closeMenu}
+            >
               Componente GPT
             </NavLink>
-            <NavLink href="#reflection" icon={<Sparkles className="h-4 w-4" />}>
+            <NavLink
+              href="#reflection"
+              icon={<Sparkles className="h-4 w-4" />}
+              onClick={closeMenu}
+            >
               Reflexión
             </NavLink>
           </nav>
@@ -73,13 +90,15 @@ interface NavLinkProps {
   href: string;
   icon: React.ReactNode;
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
-const NavLink = ({ href, icon, children }: NavLinkProps) => {
+const NavLink = ({ href, icon, children, onClick }: NavLinkProps) => {
   return (
     <a
       href={href}
       className="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+      onClick={onClick}
     >
       {icon}
       <span className="text-sm font-medium">{children}</span>
