@@ -5,7 +5,7 @@ import { CheckCircle, Shield, AlertTriangle, RefreshCw } from "lucide-react";
 const Testing = () => {
   return (
     <div className="py-12">
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-6 order-2 md:order-1">
           <Card
             title="Generación Automatizada de Pruebas"

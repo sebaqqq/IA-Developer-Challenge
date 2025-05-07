@@ -65,7 +65,7 @@ const OptimizationSection = () => {
 const ProcessTabs = () => {
   return (
     <div className="flex justify-center overflow-x-auto py-4">
-      <div className="inline-flex bg-white rounded-lg shadow-sm p-1 border border-gray-200">
+      <div className="inline-flex bg-white rounded-lg shadow-sm p-1 border border-gray-200 w-full sm:w-auto sm:flex-row flex-col">
         <ProcessTab
           href="#development"
           icon={<Code className="h-4 w-4" />}
@@ -101,7 +101,7 @@ const ProcessTab: React.FC<ProcessTabProps> = ({ href, icon, label }) => {
   return (
     <a
       href={href}
-      className="flex items-center px-4 py-2 text-sm font-medium rounded-md hover:bg-gray-50 text-gray-700 transition-colors"
+      className="flex items-center px-4 py-2 text-sm font-medium rounded-md hover:bg-gray-50 text-gray-700 transition-colors w-full sm:w-auto"
     >
       <span className="text-blue-600 mr-2">{icon}</span>
       {label}
